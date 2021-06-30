@@ -1,0 +1,29 @@
+<div class="jambtron">
+   <h1 class="display-4 text-center">Payment Detail</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <app-payment-detail-form></app-payment-detail-form>
+    </div>
+    <div class="col-md-6">
+      <table class="table">
+          <thead class="thead-light">
+              <tr>
+                  <th>Card Owner</th>
+                  <th>Card Number</th>
+                  <th>Expiration Date</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let pd of service.list" >
+                  <td>{{pd.cardName}}</td>
+                  <td>{{pd.cardNumber}}</td>
+                  <td>{{pd.expirationDate}}</td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+</div>
+
